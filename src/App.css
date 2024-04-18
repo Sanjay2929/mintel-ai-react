@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "proxima-nova";
+  src: url(./assets/font-family/proximanova_bold.otf);
+  src: url(./assets/font-family/proximanova_regular.ttf);
+}
+.font-proxima {
+  font-family: "proxima-nova";
+}
+@font-face {
+  font-family: "lulo";
+  src: url(./assets/font-family/Lulo\ Clean\ One\ Bold.otf);
+}
+.font-lulo {
+  font-family: "lulo";
+}
+
+.mix_blend_luminosity {
+  mix-blend-mode: luminosity;
+}
+.cards_sales:hover {
+  box-shadow: 0px 0px 12px 6px #0bb89d0f;
+  box-shadow: 0px 0px 18.5px 0px #0bb89d4d;
+}
+
+.auto_pilot_bg {
+  background: linear-gradient(134.44deg, #0bb89d -2.33%, #7d4eff 98.65%);
+}
+
+.timer_scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
