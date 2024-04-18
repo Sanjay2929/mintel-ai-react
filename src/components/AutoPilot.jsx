@@ -15,7 +15,7 @@ const AutoPilot = () => {
               Find buyers while you sleep
             </p>
           </div>
-          <div className="flex sm:justify-between justify-center md:pt-[60px] pt-10 flex-wrap sm:gap-y-10 gap-y-20 w-full">
+          <div className="flex lg:justify-between justify-center md:pt-[60px] pt-10 flex-wrap gap-x-[24px] lg:gap-x-0 sm:gap-y-10 gap-y-20 w-full">
             {findBuyer.map((value, index) => {
               return (
                 <div

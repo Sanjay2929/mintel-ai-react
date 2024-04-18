@@ -4,7 +4,7 @@ import hero_gif from "../assets/images/header/hero.gif";
 
 const Header = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="lg:min-h-screen relative">
       <div className="container xl:max-w-[1140px] px-4 xl:px-0 mx-auto pt-[31px]">
         <a href="/" className="text-red-500 ">
           <MintelLogo />
@@ -20,7 +20,7 @@ const Header = () => {
           <button className="py-4 font-proxima px-[29px] bg-green hover:bg-transparent hover:border-green border border-transparent duration-300 rounded-lg font-normal text-base text-white relative z-[2]">
             Early Access
           </button>
-          <div className="md:max-w-[600px] sm:max-w-[400px] max-w-[300px] md:h-[632px] sm:h-[400px] h-[300px] overflow-hidden bg-darkGreen md:-mt-[50px] relative z-0 w-full">
+          <div className="md:max-w-[600px] sm:max-w-[400px] max-w-[300px] md:h-[632px] sm:h-[400px] h-[300px] overflow-hidden bg-darkGreen md:-mt-[30px] relative z-0 w-full">
             <img
               className="w-full object-cover object-top mix_blend_luminosity"
               src={hero_gif}

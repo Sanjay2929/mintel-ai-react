@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import linkedin from "../../src/assets/images/footer/linkedin.png";
 import google from "../../src/assets/images/footer/google.png";
 import microsoft from "../../src/assets/images/footer/microsoft.png";
 import aws from "../../src/assets/images/footer/aws.png";
 
 const Footer = () => {
+  const [signInInfo, setSignInInfo] = useState("");
+  const formDataHandler = (e) => {
+    e.preventDefault();
+    if (signInInfo === "") {
+      alert("enter valid email address");
+    } else {
+      console.log(signInInfo);
+      setSignInInfo("");
+    }
+  };
   return (
     <div className="relative">
       <div className="container xl:max-w-[1140px] px-4 xl:px-0 mx-auto lg:pt-[100px] pt-20 md:pb-[60px] pb-10 flex lg:flex-row flex-col justify-between relative z-10">
@@ -15,16 +25,27 @@ const Footer = () => {
           <p className="font-proxima font-semibold text-2xl text-white pt-[32px] pb-4">
             Join the waiting list
           </p>
-          <div className="flex border border-white border-opacity-[24%] max-w-[450px] justify-between rounded border-r-0">
+          <form
+            onSubmit={formDataHandler}
+            className="flex border border-white border-opacity-[24%] max-w-[450px] justify-between rounded border-r-0"
+          >
             <input
-              type="text"
+              value={signInInfo}
+              onChange={(e) => {
+                setSignInInfo(e.target.value);
+              }}
+              required
+              type="email"
               placeholder="Enter your business email"
               className="bg-transparent font-proxima p-4 sm:w-[300px] block text-white outline-none"
             />
-            <button className="py-4 font-proxima px-[29px] text-nowrap sm:w-[150px] my-[-1px] bg-green hover:bg-transparent -me-0.5 hover:border-green border border-transparent duration-300 rounded-lg font-normal text-base text-white relative z-[1]">
+            <button
+              type="submit"
+              className="py-4 font-proxima px-[29px] text-nowrap sm:w-[150px] my-[-1px] bg-green hover:bg-transparent -me-0.5 hover:border-green border border-transparent duration-300 rounded-lg font-normal text-base text-white relative z-[1]"
+            >
               Sign Up
             </button>
-          </div>
+          </form>
         </div>
         <div className="lg:pt-0 pt-6 flex flex-col lg:items-start items-center">
           <h3 className="font-proxima font-semibold text-2xl text-white pb-3">
